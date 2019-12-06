@@ -1,0 +1,57 @@
+
+ .header .header-top{
+    width: 100%;
+    height: 77px;
+    background-color: #000000;
+}
+.header .header-top .logo{
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: url(img/logo.png) no-repeat center;
+    margin-top: 16px ;
+    margin-left: 51px ;
+    margin-right: 10px;
+}
+.header .header-top .logo-t{
+    float: left;
+    width: 67px;
+    height: 37px;
+    margin-top: 22px;
+    background: url(img/logo-t.png) no-repeat center;
+}
+.header .header-top .nav{
+    float: right;
+    margin-top: 29px;
+}
+.header .header-top .nav-item{
+    position:relative;
+    float: left;
+    margin-right: 36px;
+}
+.header .header-top .nav-item a{
+    color: #8d8d8d;
+   
+}
+.header .header-top .nav-item .line{
+    display: none;
+    width: 64px;
+    height: 2px;
+    background-color:#dd1717;
+    position:absolute;
+    top: 28px;
+}
+.header .header-top .nav-item .line-a{
+    width: 41px;
+    height: 2px;
+    background-color:#dd1717;
+    position:absolute;
+    top: 28px;
+}
+.header .header-top .nav-item:hover .line{
+    display: block;
+    color: #dd1717;
+}
+.header .header-top .nav-item:hover a{
+    color: #dd1717;
+}

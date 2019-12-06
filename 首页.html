@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .header{
+            width: 100%;
+            height: 803px;
+            background: url(img/header11.png) no-repeat center;
+            position:relative;
+            background-size: cover;
+        }
+        .header .header-top{
+            width: 100%;
+            height: 77px;
+            background-color: rgba(0, 0, 0, 0.45)
+        }
+        .header .header-top .logo{
+            float: left;
+            width: 44px;
+            height: 44px;
+            background: url(img/logo.png) no-repeat center;
+            margin-top: 16px ;
+            margin-left: 51px ;
+            margin-right: 10px;
+        }
+        .header .header-top .logo-t{
+            float: left;
+            width: 67px;
+            height: 37px;
+            margin-top: 22px;
+            background: url(img/logo-t.png) no-repeat center;
+        }
+        .header .header-top .nav{
+            float: right;
+            margin-top: 29px;
+        }
+        .header .header-top .nav-item{
+            position:relative;
+            float: left;
+            margin-right: 36px;
+        }
+        .header .header-top .nav-item a{
+            color: #8d8d8d;
+           
+        }
+        .header .header-top .nav-item .line{
+            display: none;
+            width: 64px;
+            height: 2px;
+            background-color:#dd1717;
+            position:absolute;
+            top: 28px;
+        }
+        .header .header-top .nav-item .line-a{
+            display: block;
+            width: 41px;
+            height: 2px;
+            background-color:#dd1717;
+            position:absolute;
+            top: 28px;
+        }
+        .header .header-top .nav-item:hover .line{
+            display: block;
+            color: #dd1717;
+        }
+        .header .header-top .nav-item:hover a{
+            color: #dd1717;
+        }
+        .header .left{
+            display: block;
+            position:absolute;
+            width: 21px;
+            height: 22px;
+            top: 429px;
+            left: 100px;
+            background: url(img/left.png) no-repeat center;
+        }
+        .header .right{
+            display: block;
+            position:absolute;
+            width: 21px;
+            height: 22px;
+            top: 429px;
+            right: 100px;
+            background: url(img/right.png) no-repeat center;
+        }
+        .header .dots .dot-l{
+            display: block;
+            width: 12px;
+            height: 11px;
+            background: url(img/bot-l.png) no-repeat center;
+            margin-right: 14px;
+        }
+        .header .dots .dot-r{
+            display: block;
+            width: 12px;
+            height: 11px;
+            background: url(img/dot-r.png) no-repeat center;
+        }
+        .header .dots li{
+            float: left;
+        }
+        .header .dots{
+            position:absolute;
+            bottom: 29px;
+            left: 50%;
+            margin-left: -19px;
+        }
+        .title{
+            width: 100%;
+            height: 199px;
+            background-color: #000000;
+            overflow: hidden;
+
+        }
+
+        .title .title-c{
+        margin: 0 auto;
+        width:fit-content;
+        height: 25px;
+        margin-top: 114px;
+        }
+        .title .line-l{
+            display: block;
+            width: 129px;
+            height: 2px;
+            background-color: #850e0e;
+            float: left;
+            margin-right: 17px;
+            margin-top: 10px;
+
+            /* 块级元素的宽度 有内容撑开 */
+            /* width:fit-content; */
+        }
+       
+        .title .line-r{
+            float: right;
+            width: 129px;
+            height: 2px;
+            background-color: #850e0e;
+            margin-left: 17px;
+            margin-top: 10px;
+        }
+       
+        .title .t{
+            color: #850e0e;
+            font-size: 24px;
+            float: left;
+        }
+      
+        .title .title-zs{
+            text-align: center;
+            color: #8c8c8c;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+  
+
+        .title-show-c{
+            width: 100%;
+            height: 648px;
+            background-color: #000000;
+            float: left;
+        }
+        .title-show-c .show-k{
+            display: block;
+            width: 355px;
+            height: 244px;
+            border: 1px solid #dd1717;
+            margin: 0 auto;
+            margin-top: 24px;
+            display: none;
+        }
+        .title-show-c .show-k .name{
+            color: #dd1717;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 97px;
+            position:relative;
+        }
+        .title-show-c .show-k .time{
+            color: #fffefe;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 33px;
+            position:relative;
+        }
+        .title-show-c .show:hover .show-k{
+            display: block;
+        }
+        .title-show .title-show-c .show .show-box11{
+            width: 100%;
+            height: 100%;
+            background-color:rgba(0, 0, 0, 0.63);
+            position: absolute;
+            display: none;
+        }
+        .title-show .title-show-c .show:hover .show-box11{
+            display: block;
+        }
+
+
+        .title-show .title-show-c .show{
+            float: left;
+            display: block;
+            height: 294px;
+            width: 24.6%;
+            background-color:blueviolet;
+            margin-right: 0.5%;
+            margin-bottom: 0.5%;
+            position:relative;
+        }
+
+        .view-more{
+            display: block;
+            width: 100%;
+            height: 100px;
+            background-color: #dd1717;
+            text-align: center;
+            font-size: 18px;
+            color: #ffffff;
+            float: left;
+            line-height: 100px;
+        }
+        .welfare .welfare-c{
+            width: 1202px;
+            height: 969px;
+            background-color: #000000;
+            margin: 0 auto;
+          
+        }
+        .welfare .welfare-c .line{
+            width: 1px;
+            height: 808px;
+            background-color: #1a1a1a;
+            margin: 0 auto;
+        }
+        .welfare .welfare-c .dot-1{
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            border: 2px solid #333333;
+            position: absolute;
+            left: 592px;
+            top: 86px;
+        } 
+        .welfare .welfare-c .dot-2{
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            border: 2px solid #333333;
+            position: absolute;
+            right: 592px;
+            top: 150px;
+        } 
+        .welfare .welfare-c .dot-3{
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            border: 2px solid #333333;
+            position: absolute;
+            left: 592px;
+            top: 150px;
+        } 
+        .welfare .welfare-c .dot-4{
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            border: 2px solid #333333;
+            position: absolute;
+            right: 594px;
+            top: -80px;
+        } 
+        .welfare .welfare-c a:hover .dot-1{
+            border: 2px solid #dd1717;
+        }
+        .welfare .welfare-c a:hover .dot-2{
+            border: 2px solid #dd1717;
+        }
+        .welfare .welfare-c a:hover .dot-3{
+            border: 2px solid #dd1717;
+        }
+        .welfare .welfare-c a:hover .dot-4{
+            border: 2px solid #dd1717;
+        }
+
+        .welfare .welfare-c a{
+            display: block;
+            width: 514px;
+            height: 302px;
+            float: left;
+            position: relative;
+            border: 1px solid #000000;
+        }
+        .welfare .welfare-c .welfare-1{
+            background: url(img/welfare1.png) no-repeat center;
+            background-size: cover;
+        }
+        .welfare .welfare-c .welfare-3{
+            background: url(img/welfare3.png) no-repeat center;
+            background-size: cover;
+            margin-top: 87px;
+            float: left;
+        }
+        .welfare .welfare-c .welfare-2{
+            background: url(img/welfare2.png) no-repeat center;
+            background-size: cover;
+            float: right;
+            margin-top: 181px;
+        }
+        .welfare .welfare-c .welfare-4{
+            background: url(img/welfare4.png) no-repeat center;
+            background-size: cover;
+            float: right;
+            margin-top: 88px;
+        }
+        .welfare .welfare-c .th{
+            display: block;
+            height: 51px;
+            width: 516px;
+            position: absolute;
+            bottom:-1px;
+            left: -1px;
+            background-color: #212121;
+            color: #bcbcbc;
+            line-height: 51px;
+            text-indent: 139px;
+        }
+        .welfare .welfare-c .th-1{
+            float: left;
+            color: #949494;
+            font-size: 14px;
+            text-indent: 20px;
+        }
+        .welfare .welfare-c a:hover{
+            border: 1px solid  #dd1717;
+        }
+        .welfare .welfare-c a:hover .th{
+            background-color: #dd1717;
+        }
+        .about-us{
+            width: 100%;
+            height: 541px;
+            background: #000;
+            background: url(img/about.png) no-repeat center;
+            background-size:cover;
+            float: left;
+        }
+        .about-us .about-us-c{
+            width: 1201px;
+            height: 541px ;
+            margin: 0 auto;
+        }
+        .about-us .logo{
+            background: url(img/logo.png) no-repeat center;
+            width: 44px;
+            height: 44px;
+            margin: 0 auto  ;
+            margin-top: 16px;
+        }
+        .about-us .about-tt{
+            display: block;
+            float: left;
+            width: 208px;
+            height: 285px;
+            /* background-color:royalblue; */
+            margin-right: 120px;
+        }
+        .about-us .about-tt .about-p{
+            display: block;
+            width: 32px;
+            height: 32px;
+            background: url(img/about-t1.png) no-repeat center;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        .about-us .about-tt .about-ttt{
+           color: #ffffff;
+           font-style: 16px;
+           line-height: 23px;
+        }
+        .medical{
+            width: 100%;
+            height: 445px;
+            background-color: #000000;
+            overflow: hidden;
+
+        }
+        .medical .medical-c{
+            height: 445px;
+            width: 1202px;
+            margin:  0 auto;
+        }
+        .medical .medical-c .ept{
+            width: 949px;
+            height: 230px;
+            background-color: #000000;
+            margin-left: 125px;
+            margin-top: 19px;
+            position: absolute;
+        }
+        .medical .medical-c .ept .ept-p{
+            height: 260px;
+            width: 170px;
+            float: left;
+            margin-right: 23px;
+        }
+        .medical .medical-c .ept .box{
+            display: block;
+            width: 168px;
+            height: 162px;
+            border: 1px solid #141414;
+            position: relative;
+            top: 98px;
+            position: absolute;
+
+           
+
+        }
+        .arrow {
+        position: absolute;
+        left: 50%;
+        top: -33px;
+        margin-left: -12px;
+        width: 0;
+        height: 0;
+        border: 12px solid;
+        border-color: transparent transparent #141414 ;
+        border-bottom-width: 20px;
+        }
+
+        .arrow1 {
+        position: absolute;
+        left: 50%;
+        top: -29px;
+        margin-left: -13px;
+        width: 0;
+        height: 0;
+        border: 13px solid;
+        border-color: transparent transparent #000000;
+        /* border-color: #000 transparent transparent; */
+        border-bottom-width: 20px;
+        }
+        .medical .medical-c a:hover .arrow{
+            border-color: transparent transparent #dd1717;
+
+        }
+        .medical .medical-c .box:hover {
+            border: 1px solid #dd1717;
+
+        }
+        .medical .medical-c .box .D{
+            float: left;
+            width: 169px;
+            height: 19px;
+            background-color: #dd1717;
+            position: relative;
+            top: 143px;
+            display: none;
+        }
+        .medical .medical-c .box:hover .D{
+            display: block;
+        }
+        .medical .medical-c .box .t{
+            font-size: 16px;
+            color: #ffffff;
+            margin-top: 29px;
+            text-align: center;
+        }
+        .medical .medical-c .box .b{
+            font-size: 12px;
+            color: #8c8c8c;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .medical .medical-c .box .bb{
+            font-size: 12px;
+            color: #8c8c8c;
+            margin-top: 13px;
+            text-align: center;
+        }
+        .medical .medical-c .box-x{
+            width: 170px;
+            height: 260px;
+            display: block;
+        }
+        .medical .medical-c .box-x .box-p{
+            width: 55px;
+            height: 75px;
+            background:url(img/box-1.png) no-repeat center;
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translate(-50%,0);
+        }
+        .medical .medical-c .box-x .box-p-2{
+            width: 55px;
+            height: 75px;
+            background:url(img/box-2.png) no-repeat center;
+            margin: 0 auto;
+        }
+        .medical .medical-c .box-x .box-p-3{
+            width: 55px;
+            height: 75px;
+            background:url(img/box-3.png) no-repeat center;
+            margin: 0 auto;
+        }
+        .medical .medical-c .box-x .box-p-4{
+            width: 55px;
+            height: 75px;
+            background:url(img/box-4.png) no-repeat center;
+            margin: 0 auto;
+        }
+        .medical .medical-c .box-x .box-p-5{
+            width: 55px;
+            height: 75px;
+            background:url(img/box-5.png) no-repeat center;
+            margin: 0 auto;
+        }
+        .medical .medical-c .box-x:hover .box-p{
+            background:url(img/boxx-1.png) no-repeat center;
+            
+        }
+        .medical .medical-c .box-x:hover .box-p-2{
+            background:url(img/boxx-2.png) no-repeat center;
+            
+        } .medical .medical-c .box-x:hover .box-p-3{
+            background:url(img/boxx-3.png) no-repeat center;
+         }
+         .medical .medical-c .box-x:hover .box-p-4{
+            background:url(img/boxx-4.png) no-repeat center;
+        }
+        .medical .medical-c .box-x:hover .box-p-5{
+            background:url(img/boxx-5.png) no-repeat center; 
+        }
+        .footer{
+            float: left;
+            width: 100%;
+            height: 230px;
+            background-color:#000000;
+        }
+        /* 459 111 */
+        .footer .footer-c{
+            width: 1202px;
+            height: 230px;
+            /* background-color: chartreuse; */
+            margin: 0 auto;
+        }
+        .footer .footer-c .footer-box1{
+            width: 400px;
+            height: 111px;
+            /* background-color:darkgoldenrod; */
+            float: left;
+            margin-top: 13px;
+        }
+        .footer .footer-c .footer-box2{
+            width: 400px;
+            height: 124px;
+            /* background-color:darkgoldenrod; */
+            float: left;
+            border-left: 1px solid #0e0e0e;
+            border-right: 1px solid #0e0e0e;
+            }
+        .footer .footer-c .footer-1{
+            margin-top: 31px;
+            font-size: 16px;
+            color: #8c8c8c;
+        }
+        .footer .footer-c .footer-box2{
+            font-size: 16px;
+            color: #8c8c8c;
+            margin-top: 10px;
+        }
+        .footer .footer-c .footer-box2 p{
+            text-align:left;
+            text-indent: 70px;
+            margin-top: 20px;
+        }
+        .footer .footer-c .footer-tb-1{
+            display: block;
+            width: 29px;
+            height: 23px;
+            background: url(img/footer-1.png) no-repeat center;
+        }
+        .footer .footer-c .footer-tb-2{
+            display: block;
+            width: 29px;
+            height: 23px;
+            background: url(img/footer-2.png) no-repeat center;
+        }
+        .footer .footer-c .footer-tb-3{
+            display: block;
+            width: 29px;
+            height: 23px;
+            background: url(img/footer-3.png) no-repeat center;
+        }
+         .footer-tb-4{
+            display: block;
+            width: 29px;
+            height: 23px;
+            background: url(img/footer-4.png) no-repeat center;
+        }
+        .footer .footer-c .a{
+            float: left;
+            margin-right: 20px;
+            margin-top: 9px;
+        }
+        .footer .footer-c .footer-box3{
+            width: 400px;
+            height: 111px;
+            /* background-color:darkgoldenrod; */
+            float: left;
+            margin-top: 15px;
+            color: #8c8c8c;
+            font-size: 16px;
+        }
+        .footer .footer-c .footer-box3 p{
+            margin-top: 20px;
+            text-indent: 160px;
+        }
+        .icp{
+            float: left;
+            width: 100%;
+            height: 80px;
+            background-color: #161616;
+        }
+        .icp .icp-c{
+            width: 1202px;
+            height: 80px;
+            margin: 0 auto;
+            color: #8c8c8c;
+            font-size: 12px;
+            line-height: 80px;
+            text-align: center;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-top">
+            <div class="logo"></div>
+            <div class="logo-t"></div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a style="color: #dd1717;" href="#">&nbsp;首页&nbsp;</a>
+                    <span class="line-a"></span>
+                </li>
+                <li class="nav-item">
+                    <a href="#">样片大宴</a>
+                    <span class="line"></span>
+                </li>
+                <li class="nav-item">
+                    <a href="#">当季优惠</a>
+                    <span class="line"></span>
+                </li>
+                <li class="nav-item">
+                    <a href="#">旅拍城市</a>
+                    <span class="line"></span>
+                </li>
+                <li class="nav-item">
+                    <a href="#">关于我们</a>
+                    <span class="line"></span>
+                </li>
+                <li class="nav-item">
+                    <a href="#">联系我们</a>
+                    <span class="line"></span>
+                </li>
+            </ul>
+            <a class="left" href="#"></a>
+            <a class="right" href="#"></a>
+            <ul class="dots">
+                <li class="dots-l">
+                <a class="dot-l" href="#"></a>
+                </li>
+                <li class="dots-r">
+                <a class="dot-r" href="#"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="title">
+        <div class="title-c">
+                <span class="line-l"></span>
+                <span class="t">Exhibittion of works</span>
+                <span class="line-r"></span>
+        </div>
+        <p class="title-zs">作品展示</p>
+    </div>
+    <div class="title-show">
+        <ul class="title-show-c">
+            <li class="show" style="background: url(img/show1.png) no-repeat center;background-size: cover;">
+                <div class="show-box11">
+
+                </div>
+                <span class="show-k">
+                <p class="name">Xiao ru & Grady</p>
+                <p class="time">2018.6.25</p>
+                </span>
+            </li>
+            <li class="show" style="background: url(img/show2.png) no-repeat center;background-size: cover;">
+                <div class="show-box11">
+
+                </div>
+                <span class="show-k">
+                 <p class="name">Xiao ru & Grady</p>
+                 <p class="time">2018.6.25</p>
+                </span></li>
+            <li class="show" style="background: url(img/show3.png) no-repeat center;background-size: cover;">
+                <div class="show-box11">
+
+                </div>
+                <span class="show-k">
+                <p class="name">Xiao ru & Grady</p>
+                <p class="time">2018.6.25</p>
+                </span>
+            </li>
+            <li class="show" style="margin-right: 0;background: url(img/show4.png) no-repeat center;background-size: cover;">
+                <div class="show-box11">
+
+                </div>
+                <span class="show-k">
+                <p class="name">Xiao ru & Grady</p>
+                <p class="time">2018.6.25</p>
+                 </span>
+            </li>
+            <li class="show" style="background: url(img/2show1.png) no-repeat center;background-size: cover;">
+                <div class="show-box11">
+
+                </div>
+                <span class="show-k">
+                <p class="name">Xiao ru & Grady</p>
+                <p class="time">2018.6.25</p>
+                </span>
+            </li>
+            <li class="show" style="background: url(img/2show2.png) no-repeat center;background-size: cover;">
+                <div class="show-box11">
+
+                </div>
+                <span class="show-k">
+                <p class="name">Xiao ru & Grady</p>
+                <p class="time">2018.6.25</p>
+                </span>
+            </li>
+            <li class="show" style="background: url(img/2show3.png) no-repeat center;background-size: cover;">
+                <div class="show-box11">
+
+                </div>
+                <span class="show-k">
+                <p class="name">Xiao ru & Grady</p>
+                <p class="time">2018.6.25</p>
+                </span>
+            </li>
+            <li class="show" style="margin-right: 0;background: url(img/2show4.png) no-repeat center;background-size: cover;">
+                <div class="show-box11">
+
+                </div>
+                <span class="show-k">
+                <p class="name">Xiao ru & Grady</p>
+                <p class="time">2018.6.25</p>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <a href="#" class="view-more">
+        VIEW MORE
+    </a>
+    <div class="title">
+            <div class="title-c">
+                    <span class="line-l" style="margin-right: 87px;"></span>
+                    <span class="t">Welfare</span>
+                    <span class="line-r" style="margin-left: 87px;"></span>
+            </div>
+            <p class="title-zs">优惠福利</p>
+        </div>
+    <div class="welfare" style="background-color: #000000;">
+        <div class="welfare-c">
+                    <a href="#" class="welfare-1">
+                            <span class="th">
+                                7288元/套
+                                <span class="th-1">国庆特惠</span>
+                            </span>
+                            <div class="dot-1" ></div>
+                        </a>
+            <a href="#" class="welfare-2">
+                    <span class="th">
+                        5520元/套
+                        <span class="th-1">情侣特惠</span>
+                    </span>
+                    <div class="dot-2" ></div>
+            </a>
+            <a href="#" class="welfare-3">
+                    <span class="th">
+                        6250元/套
+                        <span class="th-1">闺蜜套餐</span>
+                    </span>
+                    <div class="dot-3" ></div>
+            </a>
+            <a href="#" class="welfare-4">
+                    <span class="th">
+                        3230元/套
+                        <span class="th-1">个人福利</span>
+                        <div class="dot-4" ></div>
+                    </span>
+            </a>
+            <div class="line"></div>
+        </div>
+    </div>
+    
+    <div class="about-us">
+        <div class="about-us-c">
+                <div class="title" style="background-color: rgba(0, 0, 0, 0);">
+                    <div class="title-c">
+                        <span class="line-l" style="margin-right: 75px;"></span>
+                        <span class="t">About us</span>
+                        <span class="line-r" style="margin-left: 75px;"></span>
+                    </div>
+                        <p class="title-zs">关于我们</p>
+                    </div>
+                <div class="logo"></div>
+                <ul class="about-t">
+                    <li class="about-tt">
+                        <p class="about-p"></p>
+                        <p class="about-ttt"> 2014 年 成 立 于 郑 州，是 郑 州 知 名 一 线 品 牌 旅 拍 摄 影 工 作。</p>
+
+                    </li>
+                    <li class="about-tt">
+                            <p class="about-p" style="background: url(img/about-t2.png) no-repeat center;"></p>
+                            <p class="about-ttt">作 品 多 次 被 今 日 人 像和 人 像 摄 影  等 知 名 行 内 杂 志 推 荐</p>
+    
+                        </li>
+                    </li>
+                    <li class="about-tt">
+                            <p class="about-p" style="background: url(img/about-t3.png) no-repeat center;"></p>
+                            <p class="about-ttt"> 我 们 的 拍 摄 方 式 更 像 是 一 天 旅 行，风 景 与 光 影，只是 为 了 见证 情 感</p>
+    
+                        </li>
+                    </li>
+                    <li class="about-tt" style=" margin-right:0;">
+                            <p class="about-p" style="background: url(img/about-t4.png) no-repeat center;"></p>
+                            <p class="about-ttt"> 时 尚 会 消 逝，影 像 会 长 存，我 们 让 每 一 张 照 片
+                                    充 满 幸 福 的 温 度。</p>
+                        </li></li>
+                </ul>
+        </div>
+    </div>
+    <div class="title" style="float: left;margin-top: 0;" >
+        <div class="title-c">
+            <span class="line-l"></span>
+            <span class="t">Medical equipment</span>
+            <span class="line-r"></span>
+        </div>
+        <p class="title-zs">约拍流程</p>
+    </div>
+    <div class="medical">
+        <div class="medical-c">
+            <ul class="ept">
+                <li class="ept-p">
+                    <a class="box-x" href="#">
+                        <div class="box">
+                            <div class="arrow"></div>
+                            <div class="arrow1"></div>
+                            <div class="D"> </div>
+                            <p class="t">前期沟通</p>
+                            <p class="b">确定时间地点及相关事项</p>
+                            <div class="box-p"></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="ept-p">
+                        <a class="box-x" href="#">
+                                <div class="box-p-2"></div>
+                                <div class="box">
+                                    <div class="arrow"></div>
+                                    <div class="arrow1"></div>
+                                    <div class="D"> </div>
+                                    <p class="t">签约拍摄</p>
+                                    <p class="b">签订拍摄协议,预付</p>
+                                    <p class="bb">30%款项</p>
+                                </div>
+                            </a>
+                </li>
+                <li class="ept-p">
+                        <a class="box-x" href="#">
+                                <div class="box-p-3"></div>
+                                <div class="box">
+                                    <div class="arrow"></div>
+                                    <div class="arrow1"></div>
+                                    <div class="D"> </div>
+                                    <p class="t">拍摄</p>
+                                    <p class="b">指派摄影师拍摄,拍摄</p>
+                                    <p class="bb">完毕后支付4%款项</p>
+                                </div>
+                            </a>
+                </li>
+                <li class="ept-p">
+                        <a class="box-x" href="#">
+                                <div class="box-p-4"></div>
+                                <div class="box">
+                                    <div class="arrow"></div>
+                                    <div class="arrow1"></div>
+                                    <div class="D"> </div>
+                                    <p class="t">选片</p>
+                                    <p class="b">客户挑选拍摄的原片</p>
+                                    <p class="bb">支付剩余的30%款项</p>
+                                </div>
+                            </a>
+                </li>
+                <li class="ept-p" style="margin-right: 0;">
+                        <a class="box-x" href="#">
+                                <div class="box-p-5"></div>
+                                <div class="box">
+                                    <div class="arrow"></div>
+                                    <div class="arrow1"></div>
+                                    <div class="D"> </div>
+                                    <p class="t">精修返图</p>
+                                    <p class="b">后期精修挑选的原片</p>
+                                    <p class="bb">交付图片</p>
+                                </div>
+                            </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-c">
+            <ul class="footer-box">
+               <li class="footer-box1">
+                   <p class="footer-1">郑州镜界摄影服务工作室</p>
+                   <p class="footer-tb">
+                    <span class="a"><a class="footer-tb-1" href="#"></a></span> 
+                    <span class="a"><a class="footer-tb-2" href="#"></a></span>
+                    <span class="a"><a class="footer-tb-3" href="#"></a></span>
+                    <span class="a"><a class="footer-tb-4" href="#"></a></span>
+                   </p>
+               </li>   
+               <li class="footer-box2" >
+                   <p style="margin-top: 10px;">地址：郑州市郑东新区绿地中心6号楼</p>
+                   <p>服务热线：037-7981788</p>
+                   <p>邮编：456333</p>
+               </li>
+               <li class="footer-box3">
+                   <p style="margin-top: 7px;">手机：18236988754</p>
+                   <p>邮箱：912754544@qq.com</p>
+                   <p>Q Q：912754544</p>
+               </li>
+            </ul>
+        </div>
+    </div>
+    <div class="icp">
+        <div class="icp-c">
+                Copyright ©2010 ls1001.com, All rights reserved. 镜界传媒艺术有限公司 豫ICP备11028596号
+        </div>
+    </div>
+
+    
+</body>
+</html>

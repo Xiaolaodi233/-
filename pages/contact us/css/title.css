@@ -1,0 +1,48 @@
+.title{
+    width: 100%;
+    height: 199px;
+    background-color: #000000;
+    overflow: hidden;
+
+}
+
+.title .title-c{
+margin: 0 auto;
+width:fit-content;
+height: 25px;
+margin-top: 114px;
+}
+.title .line-l{
+    display: block;
+    width: 129px;
+    height: 2px;
+    background-color: #850e0e;
+    float: left;
+    margin-right: 17px;
+    margin-top: 10px;
+
+    /* 块级元素的宽度 有内容撑开 */
+    /* width:fit-content; */
+}
+
+.title .line-r{
+    float: right;
+    width: 129px;
+    height: 2px;
+    background-color: #850e0e;
+    margin-left: 17px;
+    margin-top: 10px;
+}
+
+.title .t{
+    color: #850e0e;
+    font-size: 24px;
+    float: left;
+}
+
+.title .title-zs{
+    text-align: center;
+    color: #8c8c8c;
+    margin-top: 15px;
+    font-size: 16px;
+}
